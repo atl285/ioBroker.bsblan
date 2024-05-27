@@ -1,0 +1,125 @@
+{
+    "common": {
+        "name": "bsblan",
+        "version": "0.2.3",
+        "news": {
+            "0.2.3": {
+                "en": "inoffical version pointing to other repo to stopp ioBroker from updating this adapter",
+                "de": "inoffizielle Version, die auf ein fremdes Repository zeigt, um ioBroker keine Updates mehr zu ermöglichen"
+              },
+              "0.2.2": {
+              "en": "Replace invalid characters for Object-IDs stated by JS-Controller",
+              "de": "Ersetzt für JS-Controller üngültige Zeichen für Objekt-IDs"
+            },
+            "0.2.1": {
+                "en": "Fix write issue with new bsb_lan2 firmware",
+                "de": "Behebt ein Problem beim Schreiben von Werten mit der neuen bsb_lan2 Firmware"
+            },
+            "0.2.0": {
+                "en": "Add 24h averages (needs BSB_LAN FW 1.1)",
+                "de": "Unterstützung für 24h Durchschnittswerte (ab BSB_LAN FW 1.1)"
+            },
+            "0.1.5": {
+                "en": "Config changed: 8700 readonly, 10003 writeType:1",
+                "de": "Konfiguration geändert: 8700 readonly, 10003 writeType:1"
+            },
+            "0.1.4": {
+                "en": "tbd",
+                "de": "tbd"
+            },
+            "0.1.3": {
+                "en": "Bugfix: Amount of IDs were silently limited",
+                "de": "Bugfix: Menge an IDs wurde begrenzt"
+            },
+            "0.1.2":{
+                "en": "Support INF interface for setting external room temperatures",
+                "de": "Unterstützung der INF Schnittstelle um externe Raumtemperaturen zu übermitteln"
+            },
+            "0.1.1":{
+                "en": "Support for micro and bugfixes",
+                "de": "Unterstützung der Einheit micro und Bugfixes"
+            },
+            "0.1.0": {
+                "en": "Support writing values to BSB_LAN Interface to control the device",
+                "de": "Unterstützung zum Schreiben von Werten und damit das Steuern des Heizgeräts"
+            },
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "BSB LAN (ATL)",
+        "titleLang": {
+            "en": "Connects the BSB_LAN Interface with ioBroker",
+            "de": "Verbindet das BSB_LAN Interface mit ioBroker"
+        },
+        "desc": {
+            "en": "Connects the BSB_LAN Interface with ioBroker",
+            "de": "Verbindet das BSB_LAN Interface mit ioBroker"
+        },
+        "authors": [
+            "atl285 <bsblan.285@gmail.com>"
+        ],
+        "keywords": [
+            "broetje brötje mhg fujitsu elco siemens lpb heating gas heizung bsb lan"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "bsblan.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/hacki11/ioBroker.bsblan/master/admin/bsblan.png",
+        "readme": "https://github.com/hacki11/ioBroker.bsblan/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "climate-control",
+        "compact": true,
+        "materialize": true,
+        "dependencies": [
+            {
+                "js-controller": ">=1.4.2"
+            }
+        ],
+        "connectionType": "local",
+        "dataSource": "poll"
+    },
+    "native": {
+        "host": "",
+        "user": "",
+        "password": "",
+        "values": "700",
+        "interval": "10"
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}

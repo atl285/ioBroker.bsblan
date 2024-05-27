@@ -1,0 +1,15 @@
+/* You can delete those if you want. I just found them very helpful */
+* {
+    box-sizing: border-box
+}
+.m {
+    /* Don't cut off dropdowns! */
+    overflow: initial;
+}
+
+/* Add your styles here */
+/* admin overrides .hiddendiv with display: none -> textarea will not autoresize */
+.hiddendiv {
+    visibility: hidden;
+    display: block;
+}
